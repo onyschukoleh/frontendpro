@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>homework_2/task_1</title>
+</head>
+<body>
+<h2>ДЗ 2.1. Робота з GIT</h2>
+<p>Встановити GIT та вивчити функціонал основних команд.</p>
+<pre><code>user@WIN-TPS7E0LG4R1 MINGW64 /c/Front-end Pro
+$ git init
+Initialized empty Git repository in C:/Front-end Pro/.git/
+
+user@WIN-TPS7E0LG4R1 MINGW64 /c/Front-end Pro (master)
+$ git add .
+
+
+user@WIN-TPS7E0LG4R1 MINGW64 /c/Front-end Pro (master)
+$ git commit -m "Init project structure"
+Author identity unknown
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'user@WIN-TPS7E0LG4R1.(none)')
+
+user@WIN-TPS7E0LG4R1 MINGW64 /c/Front-end Pro (master)
+$ git config --global user.email "onyschukoleh@gmail.com"
+
+user@WIN-TPS7E0LG4R1 MINGW64 /c/Front-end Pro (master)
+$ git config --global user.name "Oleh"
+
+user@WIN-TPS7E0LG4R1 MINGW64 /c/Front-end Pro (master)
+$ git commit -m "Init project structure"
+[master (root-commit) a16ece5] Init project structure
+ 4 files changed, 40 insertions(+)
+ create mode 100644 README.md
+ create mode 100644 homework_1/task_1/IDE Visual Studio Code .jpg
+ create mode 100644 homework_1/task_1/index.html
+ create mode 100644 index.html
+
+user@WIN-TPS7E0LG4R1 MINGW64 /c/Front-end Pro (master)
+$ git remote add origin https://github.com/onyschukoleh/frontendpro.git
+
+user@WIN-TPS7E0LG4R1 MINGW64 /c/Front-end Pro (master)
+$ git push -u origin master
+info: please complete authentication in your browser...
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (8/8), 147.08 KiB | 3.42 MiB/s, done.
+Total 8 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/onyschukoleh/frontendpro.git
+ * [new branch]      master -&gt; master
+branch 'master' set up to track 'origin/master'.
+
+user@WIN-TPS7E0LG4R1 MINGW64 /c/Front-end Pro (master)</code></pre>
+</body>
+</html>
