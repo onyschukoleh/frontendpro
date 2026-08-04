@@ -1,0 +1,24 @@
+/* style.css */
+.toDoList {
+ 
+ width: 200px;
+    margin-top: 15px;
+}
+
+.toDoList li {
+      display: flex;
+    justify-content: space-between;
+
+         list-style: none;
+    cursor: pointer;
+    margin: 5px 0;
+}
+
+.toDoList li:hover {
+    color: rgb(43, 0, 255);
+}
+
+.message {
+    color: red;
+    margin-top: 10px;
+}
