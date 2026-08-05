@@ -1,7 +1,31 @@
 /* style.css */
 
-.message {
-    color: red;
+.container {
     margin-top: 10px;
+    /* border: 1px solid  rgb(51, 0, 255); */
+    width: 300px;
+    height: auto;
+    text-align: left;
+    background-color: lightblue;
+    padding: 15px;
+
 }
 
+.error {
+    color: red;
+    margin: 5px 0;
+    font-size: 14px;
+}
+input {
+    width: 250px;
+    margin-left: 15px;
+}
+
+h3 {
+    color: red;
+}
+
+h4 {
+    color: grey;
+    transform: uppercase;
+}

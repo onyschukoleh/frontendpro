@@ -14,18 +14,32 @@
   <style></style>
   <h2>ДЗ 13.1. Валідація з RegEx</h2>
   <p>Доробити валідацію для надсилання повідомлення з використанням регулярних виразів:</p>
-<p>Поля:</p>
-<ul >
-<li>Name - обов'язкове текстове поле</li>
-<li>Message - текстове поле не менше 5 символів</li>
-<li>Phone number - обов'язкове поле типу phone. З початком на +380</li>
-<li>Email - email обов'язково повинен мати @ та крапку</li>
-</ul>
-<p>Після відправки, в консоль відображаємо дані, які ввів користувач.</p>
-<p>Під час помилки показувати її під полем.</p>
+  <p>Поля:</p>
+  <ul>
+    <li>Name - обов'язкове текстове поле</li>
+    <li>Message - текстове поле не менше 5 символів</li>
+    <li>Phone number - обов'язкове поле типу phone. З початком на +380</li>
+    <li>Email - email обов'язково повинен мати @ та крапку</li>
+  </ul>
+  <p>Після відправки, в консоль відображаємо дані, які ввів користувач.</p>
+  <p>Під час помилки показувати її під полем.</p>
   <!-- <p>Див. консоль F12</p> -->
- 
-  <p class="message"></p>
+
+
+
+  <form class='container' method="post" action="/">
+    <h3>We would like to help you !</h3>
+    <input type="text" id="name" placeholder="Name" required>
+    <p class="error" id="nameError"></p>
+    <input type="text" id="message" name="message" minlength="5" placeholder="Message">
+    <p class="error" id="messageError"></p>
+    <h4>How to answer you?</h4>
+    <input type="tel" id="phone" name="phone" pattern="^\+380\d{9}$"  placeholder="+380XXXXXXXXX"  required>
+    <p class="error" id="phoneError"></p>
+    <input type="email" id="email" placeholder="Email" pattern="^.+@.+\..+$" required />
+    <p class="error" id="emailError"></p>
+    <button type="submit" class="addBtn">Send Message</button>
+  </form>
   <script src="./script.js">  </script>
 </body>
 

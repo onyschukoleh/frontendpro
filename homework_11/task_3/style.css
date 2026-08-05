@@ -1,0 +1,12 @@
+/* style.css */
+.photo {
+    margin-top: 10px;
+}
+
+.container .photo  {
+    width: 400px;
+    height: auto;
+    /* border: 1px solid black; */
+}
+
+
