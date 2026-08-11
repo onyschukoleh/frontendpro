@@ -1,0 +1,13 @@
+/* style.css */
+
+.btn1 .btn2 {
+    margin-top: 10px;
+    /* border: 1px solid  rgb(51, 0, 255); */
+    width: 300px;
+    height: auto;
+    text-align: left;
+    background-color: lightblue;
+    padding: 15px;
+
+}
+

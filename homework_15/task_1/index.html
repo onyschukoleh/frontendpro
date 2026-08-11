@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+ <h1 style="text-align: center">ДЗ 15.1. LokalStoreg</h1>
+  <p>Перша функція записує дані в localStorage Друга зчитує дані з localStorage (по заданому ключу)</p>
+ 
+ <button class="btn1">Додати користувача у localStorageу </button>
+ <button class="btn2">Видалити користувача з localStorageу</button>
+    
+
+ <h1 style="text-align: center">ДЗ 15.2. LokalStoreg</h1>
+    <div class="shop">
+      <ul class="list">
+        <li class="li">
+          <h4 class="name">Samsung</h4>
+          <img
+            class="img"
+            src="https://cdn.comfy.ua//media/catalog/product/s/m/sm-s931_galaxys25_front_navy_241108.jpg"
+            alt="samsung"
+          />
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab,
+            perspiciatis?
+          </p>
+          <button class = 'btn' type="button">Buy</button>
+        </li>
+        <li class="li">
+          <h4 class="name">Apple</h4>
+          <img
+            class="img"
+            src="https://scdn.comfy.ua/89fc351a-22e7-41ee-8321-f8a9356ca351/https://cdn.comfy.ua/media/catalog/product/i/p/iphone_17_pro_deep_blue_pdp_image_position_1__ce-ww_1_.jpg/w_1440"
+            alt="apple"
+          />
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab,
+            perspiciatis?
+          </p>
+          <button class = 'btn' type="button">Buy</button>
+        </li>
+        <li class="li">
+          <h4 class="name">Xiaomi</h4>
+          <img
+          class="img"
+            src="https://cdn.comfy.ua//media/catalog/product/m/1/m19a_black_back_1_.jpg"
+            alt="Xiaomi"
+          />
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab,
+            perspiciatis?
+          </p>
+          <button class = 'btn' type="button">Buy</button>
+        </li>
+         <div class="container"><p class="message"></p>  </div>
+
+      </ul>
+
+      <div class="cart">
+        <h2 style="text-align: center">Cart</h2>
+        <ul class="cart-list">
+          <li class="cart-item">
+            <img
+              src="https://cdn.comfy.ua//media/catalog/product/m/1/m19a_black_back_1_.jpg"
+              alt="img"
+              class="cart-img"
+            />
+            <p class="text">Lorem ipsum dolor sit amet.</p>
+            <button class="delete">🚫</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        border: 0;
+      }
+      .cart-item {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        height: 50px;
+        align-items: center;
+        padding: 10px 30px;
+        border: 1px solid gray;
+      }
+      .cart-item img {
+        height: 100%;
+      }
+      .delete {
+        background-color: transparent;
+      }
+      .cart-list {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 0 20px;
+      }
+      .list {
+        display: flex;
+        max-width: 500px;
+        gap: 10px;
+      }
+      .li {
+        display: flex;
+        border: 1px solid gray;
+        border-radius: 10px;
+        padding: 10px;
+        flex-direction: column;
+      }
+
+      img {
+        height: 200px;
+      }
+
+      button {
+        background-color: lime;
+        margin: 10px 0;
+        padding: 10px;
+      }
+
+      button:hover {
+        cursor: pointer;
+        background-color: rgb(173, 231, 173);
+      }
+
+      .shop {
+        display: flex;
+        margin-top: 40px;
+        justify-content: center;
+        gap: 150px;
+      }
+
+      h4 {
+        text-align: center;
+      }
+
+      .cart {
+        width: 400px;
+        border: 1px solid gray;
+      }
+    </style>
+    <script src="./script.js"></script>
+  </body>
+</html>
