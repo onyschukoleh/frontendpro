@@ -2,7 +2,7 @@ export const SmileyFaceWinner = ({
   winner,
   votes,
   returnToVoiting,
-  clearResults,
+  // clearResults,
 }) => {
   return (
     <div className="container text-center mt-1" style={{ fontStyle: "italic" }}>
@@ -21,9 +21,7 @@ export const SmileyFaceWinner = ({
           <button className="btn btn-success" onClick={returnToVoiting}>
             Return To Voiting
           </button>
-          <button className="btn btn-danger" onClick={clearResults}>
-            Clear Results
-          </button>
+         
         </div>
       )}
     </div>

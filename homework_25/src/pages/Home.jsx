@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { SmileyFaceVoting } from "../components/SmileyFaceVoiting.jsx";
 import { SmileyFaceWinner } from "../components/SmileyFaceWinner.jsx";
 
-import entries from "../entries.js";
+const entries={ "😀": 0, "😍": 0, "😎": 0, "🚀": 0, "❤️": 0 };
 
 export const Home = () => {
   const [winner, setWinner] = useState("");
@@ -39,13 +39,14 @@ export const Home = () => {
           winner={winner}
           votes={votes}
           returnToVoiting={returnToVoiting}
-          clearResults={clearResults}
+         
         />
       ) : (
         <SmileyFaceVoting
           votes={votes}
           setVotes={setVotes}
           setWinner={setWinner}
+           clearResults={clearResults}
         />
       )}
     </>

@@ -1,5 +1,9 @@
-export const SmileyFaceVoting = ({ votes, setVotes, setWinner }) => {
+import { useEffect, useState } from "react";
+
+export const SmileyFaceVoting = ({ votes, setVotes, setWinner,clearResults }) => {
+   const [isVoting, setIsVoting] = useState(false);
   const handleVote = (emoji) => {
+    setIsVoting(false)
     setVotes((prev) => ({
       ...prev,
       [emoji]: prev[emoji] + 1,
@@ -12,6 +16,7 @@ export const SmileyFaceVoting = ({ votes, setVotes, setWinner }) => {
     // якщо всі нулі
     if (maxVotes === 0) {
       setWinner("");
+setIsVoting(true)
       return;
     }
     const maxEmoji = Object.keys(votes).find(
@@ -45,7 +50,11 @@ export const SmileyFaceVoting = ({ votes, setVotes, setWinner }) => {
         <button className="btn btn-success me-3" onClick={showResults}>
           Show Results
         </button>
+         <button className="btn btn-danger" onClick={clearResults}>
+            Clear Results
+          </button>
       </div>
+       {isVoting &&<span>проголосуй</span>}
     </div>
   );
 };
