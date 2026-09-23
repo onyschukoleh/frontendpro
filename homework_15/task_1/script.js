@@ -31,56 +31,69 @@
 // });
 
 const cartList = document.querySelector(".cart-list");
-const img = document.querySelector(".img");
-const addBtn = document.querySelector(".addBtn");
+
 document.addEventListener("click", function (event) {
   if (event.target.classList.contains("btn")) {
-    const li = document.createElement("li");
-    const key = event.target.parentElement.children[0].innerText;
+    const productCard = event.target.closest(".li");
+    const key = productCard.querySelector(".name").innerText;
 
     if (localStorage.getItem(key)) {
       addLocalStorage(key);
-
-      console.log(cards());
+      updateCartCounter(key);
     } else {
-      localStorage.setItem(key, JSON.stringify(1));
-      const counter = localStorage.getItem(key);
-      console.log("counter" + counter);
-      li.textContent = event.target.parentElement.children[0].innerText;
-      li.setAttribute("data-vlad", key);
-      const delBtn = document.createElement("button");
-      const span = document.createElement("span");
-      span.textContent = counter;
-      delBtn.textContent = "Видалити";
-      li.appendChild(span);
-      li.appendChild(delBtn);
-
-      cartList.appendChild(li);
+      localStorage.setItem(key, 1);
+      addProductToCart(key);
     }
+  }
 
-    // cartList.addEventListener("click", function (event) {
-    //   if (event.target.tagName === "BUTTON") {
-    //     event.target.parentElement.remove();
-    //   }
-    // });
-  } else {
-    document.querySelector(".message").textContent = "";
+  if (event.target.classList.contains("delete")) {
+    const li = event.target.closest(".cart-item");
+    const key = li.dataset.product;
+
+    li.remove();
+    localStorage.removeItem(key);
   }
 });
+function addProductToCart(key, imgSrc) {
+  const li = document.createElement("li");
+  li.classList.add("cart-item");
+  li.dataset.product = key;
 
-function cards() {
-  const cardItems = document.querySelectorAll(".cart-item");
-  cardItems.forEach((item) => {
-    console.log(item);
-  });
+  const img = document.createElement("img");
+  img.src = imgSrc;
+  img.alt = key;
+
+  const title = document.createElement("p");
+  title.textContent = key;
+
+  const span = document.createElement("span");
+  span.textContent = localStorage.getItem(key);
+
+  const delBtn = document.createElement("button");
+  delBtn.classList.add("delete");
+  delBtn.textContent = "🚫";
+
+  li.appendChild(img);
+  li.appendChild(title);
+  li.appendChild(span);
+  li.appendChild(delBtn);
+
+  cartList.appendChild(li);
 }
-
 function addLocalStorage(key) {
   const counter = localStorage.getItem(key);
   localStorage.setItem(key, Number(counter) + 1);
 }
 
-function clearLocalStorage(key) {
-  const counter = localStorage.getItem(key);
-  localStorage.setItem(key, Number(counter) - 1);
+function updateCartCounter(key) {
+  const cartItem = document.querySelector(`[data-product="${key}"]`);
+  const imgSrc = productCard.querySelector(".img").src;
+
+  addProductToCart(key, imgSrc);
+  if (cartItem) {
+    const span = cartItem.querySelector("span");
+    span.textContent = localStorage.getItem(key);
+  }
 }
+console.log(([].something = 5));
+console.log(0 || (1 && 2) || 3);
